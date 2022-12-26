@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo"></h1>
+    Sum = <span id="display"></span>
+</body>
+<script>
+    var txt=" ";
+    var sum = 0;
+    // for(var i = 1; i <= 10; i++){
+    //       txt+= i+' ';
+    // }
+    
+    // document.getElementById('demo').innerHTML=txt;
+    var n = parseInt(prompt("Enter Number: "));
+    for(var i = 1; i <= n; i++){
+        if(i%2 == 0)
+            txt+= '<font color="red">'+i+'</font>';
+        else 
+            txt+= '<font color="green">'+i+'</font>';
+        sum += i;
+    }
+    document.getElementById('demo').innerHTML = txt;
+    document.getElementById('display').innerHTML = sum;
+</script>
+</html>

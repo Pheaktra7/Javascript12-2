@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .menu-bar{
+        width: 100%;
+        background-color: red;
+        padding: 15px 30px;
+    }
+    .menu-bar i{
+        font-size: 26px;
+        color: white;
+        cursor: pointer;
+    }
+    .left-menu{
+        width: 300px;
+        height: calc(100vh - 57px);
+        background-color: black;
+        position: absolute;
+        left: -350px;
+        transition: 0.6s;
+    }
+</style>
+<body>
+    <div class="menu-bar">
+        <i class="fa-solid fa-bars barClick"></i>
+    </div>
+    <div class="left-menu"></div>
+</body>
+<script>
+    // left-menu
+    var click = document.querySelector('.barClick');
+    var i = true
+    click.addEventListener('click',function(){
+        if(i){
+            document.querySelector('.left-menu').style.left='0';
+        }
+        else{
+            document.querySelector('.left-menu').style.left='-350px';
+        }
+        i = !i
+    });
+</script>
+</html>

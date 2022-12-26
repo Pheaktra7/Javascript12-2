@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Loop</title>
+</head>
+<style>
+    .box{
+        background-color: red;
+        float: left;
+    }
+    #text{
+        position: absolute;
+        top: 10%;
+        display: none;
+        left: 50px;
+    }
+    .box:hover #text{
+        top: 30%;
+        display: block;
+    }
+</style>
+<body>
+    <!-- <button id="change" onclick="change_Image('2.jpg')">Change Image</button> -->
+    <div class="box">
+        <img src="1.jpg" alt="" id="img" onmouseover="change_Image('2.jpg')"
+        onmouseleave="change_Image('1.jpg')">  
+        <h1 id="text">Angkor Wat</h1>
+    </div>
+</body>
+<script>
+    function change_Image(el){
+        document.getElementById('img').setAttribute('src',el);
+    }
+</script>
+</html>
